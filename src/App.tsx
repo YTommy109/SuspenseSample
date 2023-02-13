@@ -1,6 +1,7 @@
-import React from 'react';
+import { Suspense } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DataView from './DataView'
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         >
           Learn React
         </a>
+        <Suspense fallback={<p>Loading...</p>}>
+          <DataView />
+        </Suspense>
       </header>
     </div>
   );
